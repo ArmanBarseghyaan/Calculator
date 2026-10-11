@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Calculator Test" parallel = "false" verbose = "1">
+    <parameter name = "login" value= "a@a.com"/>
+    <parameter name = "password" value = "12345678"/>
+
+    <test name = "All test">
+        <classes>
+            <class name = "org.example.CalcTest"/>
+        </classes>
+    </test>
+
+    <test name = "Trigonometry test">
+        <groups>
+            <run>
+                <include name = "trigonometry"/>
+            </run>
+        </groups>
+        <classes>
+            <class name = "org.example.CalcTest"/>
+        </classes>
+    </test>
+</suite>
